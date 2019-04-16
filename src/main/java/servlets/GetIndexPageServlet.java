@@ -43,9 +43,9 @@ public class GetIndexPageServlet extends HttpServlet {
             pstmtObj = connObj.prepareStatement("SELECT * FROM users");
             rsObj = pstmtObj.executeQuery();
             while (rsObj.next()) {
-                //System.out.println("Username: " + rsObj.getString(2));
+                System.out.println("Username: " + rsObj.getString(2));
                // users.put(i++,rsObj.getString(2));
-                list.add(rsObj.getString(2));
+                //list.add(rsObj.getString(2));
             }
             System.out.println("\n=====Releasing Connection Object To Pool=====\n");
         } catch(Exception sqlException) {
