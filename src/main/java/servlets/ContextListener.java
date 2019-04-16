@@ -1,5 +1,6 @@
 package servlets;
 
+import model.user;
 import org.apache.commons.dbcp2.ConnectionFactory;
 import org.apache.commons.dbcp2.DriverManagerConnectionFactory;
 import org.apache.commons.dbcp2.PoolableConnectionFactory;
@@ -14,8 +15,11 @@ import javax.sql.DataSource;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.Map;
+
 @WebListener
 public class ContextListener implements ServletContextListener {
+    private Map<Integer, String> users;
     static final String JDBC_DRIVER = "org.postgresql.Driver";
     static final String JDBC_DB_URL = "jdbc:postgresql://localhost:5432/bank";
     static final String JDBC_USER = "postgres";
@@ -34,6 +38,7 @@ public class ContextListener implements ServletContextListener {
             gPool.setMaxIdle(5);
             dataSource = new PoolingDataSource(gPool);
             servletContext.setAttribute("ds",dataSource);
+            servletContext.setAttribute("users", users);
 
         } catch (Exception e){
             System.out.println("SQL exeption occured");}

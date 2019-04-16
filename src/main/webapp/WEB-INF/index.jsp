@@ -1,19 +1,20 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: truck
-  Date: 13.04.2019
-  Time: 20:23
-  To change this template use File | Settings | File Templates.
---%>
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
-  <head>
-    <title>$Title$</title>
-  </head>
-  <body>
+<head>
+  <title>Title</title>
 
-  Hello from Servlet!
+</head>
+<body>
 
-  </body>
+<h1>Hello from Java Vision!</h1><br />
+
+<h2>Все пользователи</h2><br />
+
+
+
+
+
+
+</body>
 </html>
-
